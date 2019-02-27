@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+  <title>About Me</title>
+</head>
+
+<body>
+    <div class="home">
+        <a href="index.html">
+            HOME
+        </a>
+    </div>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="about.html" class="nav-link">
+            About Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">
+            My Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            How To Reach Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="about">
+    <h1 class="lg-heading">
+      About
+      <span class="text-secondary">Me</span>
+    </h1>
+    <h2 class="sm-heading">
+      Let me tell you a few things...
+    </h2>
+    <div class="about-info">
+      <img src="img/portrait.jpg" alt="John Doe" class="bio-image">
+
+      <div class="bio">
+        <!-- <h3 class="text-secondary">BIO</h3> -->
+        <p id="hover-effect"> 
+          I've a wealth of experience spanning 1 years from self learning. I've been involved with Mean, Reactjs, MVC frameworks and other technologies . You'll also find I'm very personable; able to listen and explain things clearly. 
+          I love producing creative solutions to fit my clients' needs. 
+        </p>
+      </div>
+
+      <div class="job job-1">
+        <h2 id="tubeLight-1" onmouseover="tubelightOn(this,1)" onmouseout="tubelightOff(this)">Front End Learning</h2>
+        <!-- <div class="line"></div> -->
+        <p>
+          I started to front-end in second years and starts width HTML, CSS.This gives me nice experience
+          of working on project. I work on front end for 6-7 month learning fancy staff like bootstrap, SASS.
+          Now, I working on javascript and Reactjs for front-end.
+        </p> 
+      </div>
+
+      <div class="job job-2">
+        <h2 id="tubeLight-2" onmouseover="tubelightOn(this,2)" onmouseout="tubelightOff(this)">Backend Learning</h2>
+      
+        <p>
+
+        </p>
+      </div>
+
+      <div class="job job-3" >
+        <h2 id="tubeLight-3" onmouseover="tubelightOn(this,3)" onmouseout="tubelightOff(this)">Design</h2>
+        <p>
+          I work some of design tool like wireframe, gravit for designing. These tools gives very best prototypes
+          of what you are working on. I just know to use thses tools simply.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="main-footer">
+    Copyright &copy; 2018
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  // hover-effect in paragraph
+    const para = document.querySelector('#hover-effect')
+    var contents = para.innerHTML.split(" ");
+    var modText = '';
+
+    for (var i = 0; i < contents.length; i++) {
+      modText += '<span onmouseover="changeToBlueColor(this)" onmouseout="changeToBlackColor(this)">' + contents[i] + '</span> ';
+    }
+    para.innerHTML = modText;
+
+    function changeToBlueColor(e) {
+      e.classList.add('light');
+    }
+
+    function changeToBlackColor(e) {
+      e.classList.remove('light')
+      // console.log(this)
+    }
+    // const heading = document.querySelector('#tubeLight-1,#tubeLight-2,#tubeLight-3 ')
+    // console.log(heading)
+    // var contents = heading.innerHTML.split(" ");
+    // var modLight = '';
+
+    // for (var i = 0; i < contents.length; i++) {
+    //   modLight += '<span>' + contents[i] + '</span> ';
+    // }
+    // heading.innerHTML = modLight;
+    var toogle=1;
+    function tubelightOn(x,v) {
+       
+      if(toogle) {    
+         toogle=0; 
+         
+         var contents = x.innerHTML.split(" ");
+         var modLight = '';
+         for (var i = 0; i < contents.length; i++) {
+            modLight += '<span>' + contents[i] + '</span> ';
+          }
+          x.innerHTML = modLight;
+
+        }
+        const a=x.children;
+        let tm = 600;
+        for(let i=0;i<a.length;i++) {           
+            setTimeout(()=>{x.children[i].style.color="#fcdd32"}, tm*(i+.09))
+        }
+         
+    }
+
+    function tubelightOff(x) {
+      
+      }
+
+   
+  </script>
+</body>
+
+</html>
