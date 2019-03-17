@@ -103,6 +103,37 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.comment {
+  font-size: 2rem;
+  max-width: 160px;
+  border-bottom: 2px solid #fcdd32; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: rgba(199, 199, 199, 0.329); }
+  .messages .ndt .name {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.993);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial; }
+  .messages .ndt .date-time {
+    font-weight: 200;
+    font-size: 1rem;
+    letter-spacing: .7px;
+    color: rgba(241, 236, 225, 0.89); }
+  .messages .msg {
+    max-width: 90%;
+    padding-left: 10px; }
+
 * {
   box-sizing: border-box; }
 
@@ -158,6 +189,7 @@ header {
 
 main {
   padding: 4rem;
+  padding-bottom: 2rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }

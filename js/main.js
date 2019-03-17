@@ -33,3 +33,32 @@ function toggleMenu() {
   }
 }
 
+// //fetch
+// const name = document.querySelector('#name')
+// const comment = document.querySelector('#msg')
+
+// // display
+// const msg = document.querySelector('.msg')
+// const user = document.querySelector('.ndt')
+// console.log(user)
+
+// const btnOk = document.getElementById("ok");
+// const btnCancel = document.getElementById("cancel");
+
+// btnOk.addEventListener("click", function(){
+//    console.log("btnok");
+//    const data =
+//      {   name : name.value,
+//          comment : comment.value
+//      }
+//      const dataJson = JSON.stringify(data);
+//      console.log(data);
+// });
+
+// btnCancel.addEventListener("click", function(){
+//   console.log("btnCancel");
+//   name.value = "";
+//   comment.value = "";
+// });
+
+// // console.log(document.querySelector('.comment'))
